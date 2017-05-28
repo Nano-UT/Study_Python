@@ -3,3 +3,4 @@ def add_n(n):
         x = x + n
         return x
     return f 
+# 良いと思います

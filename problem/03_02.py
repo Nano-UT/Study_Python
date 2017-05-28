@@ -4,3 +4,4 @@ while(1):
         break
     else:
         print(inputsentence + "アル")
+# 実はend=を使ってみてほしかったんですが，この回答も素直な解答で良いです

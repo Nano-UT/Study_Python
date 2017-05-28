@@ -39,5 +39,6 @@ def is_perfect(n):
 
 def my_filter(ran, fun):
     for i in ran:
+#       引数に取った fun を使いましょう（笑）
         if is_perfect(i):
             print(i)

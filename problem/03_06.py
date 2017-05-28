@@ -3,3 +3,4 @@ def my_sum(*args):
     for a in args:
         sumup += a
     return sumup
+# 良いと思います．簡単すぎて特に言うこともないですね．
