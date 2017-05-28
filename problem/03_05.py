@@ -6,3 +6,4 @@ def fib(x):
     print(fibs[x])
 
 fib(10)
+# よいと思います
