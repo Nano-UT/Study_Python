@@ -1,20 +1,21 @@
+import math
+
 def is_perfect(n):
     pnums = []
 
     for i in range(1,n):
         pnums.append(True)
 
-    for i in range(2,n):
+    for i in range(2,int(math.sqrt(n))+1):
         if pnums[i-1]:
             for j in range(i+i,n,i):
-                pnums.insert(j-1,False)
-                pnums.pop(j)
+                pnums[j-1]=False
 
     primes = []
 
     for i in range(2,n):
         if pnums[i-1]:
-            primes.insert(i-1,i)
+            primes.append(i)
 
     Num = n
     decom = []
@@ -23,22 +24,21 @@ def is_perfect(n):
         count = 0
         while Num % p == 0:
             count += 1
-            Num = Num / p
+            Num = Num // p
         decom.append(count)
 
     pro = 1
 
-    for i in range(1,len(primes)):
-        pro = pro * (((primes[i-1] ** (decom[i-1] + 1)) -1)/(primes[i-1]-1))
-        pro = int(pro)
+    for i in range(0,len(primes)):
+        pro = pro * (((primes[i] ** (decom[i] + 1)) -1)//(primes[i]-1))
 
     if pro == 2 * n:
         return True
     else:
         return False
 
+
 def my_filter(ran, fun):
     for i in ran:
-#       引数に取った fun を使いましょう（笑）
-        if is_perfect(i):
+        if fun(i):
             print(i)

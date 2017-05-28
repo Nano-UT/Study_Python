@@ -3,4 +3,5 @@ while(1):
     if inputsentence == "q":
         break
     else:
-        print(inputsentence + "アル")
+        print(inputsentence,end = "")
+        print("アル")
